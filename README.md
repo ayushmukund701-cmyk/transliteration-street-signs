@@ -20,20 +20,27 @@ For example:
 ✅ User-friendly **web app (Flask + HTML/CSS)**.  
 ✅ Supports multilingual OCR (Hindi, Tamil, Telugu, Malayalam, Kannada, Gujarati, Bengali, Gurmukhi).  
 
-## 📂 Project Structure
+# 📂 Project Structure
 street-sign-transliterator/
-│── app.py # Main Flask app
-│── ocr_module.py # OCR text extraction
-│── translit_module.py # Transliteration logic
-│── utils.py # Language detection
-│── requirements.txt # Python dependencies
-│── README.md # Documentation
-│── static/
-│ └── style.css # Web styling
-│── templates/
-│ └── index.html # Web interface
-│── samples/
+│── app.py # Main Flask app (runs the web application)
+│── ocr_module.py # OCR text extraction using Tesseract
+│── translit_module.py # Transliteration logic using Aksharamukha
+│── utils.py # Helper functions (e.g., language detection)
+│── requirements.txt # List of Python dependencies
+│── README.md # Full documentation
+
+│── static/ # Static assets (CSS, JS, images)
+│ └── style.css # Web UI styling
+
+│── templates/ # HTML templates (Flask frontend)
+│ └── index.html # Main web page
+
+│── samples/ # Sample input images
 │ └── street1.jpg # Example street sign image
+│ └── street2.jpg # (Optional) Another sample
+
+│── uploads/ # Folder to temporarily store user-uploaded images
+
 
 ## ⚙️ Installation Guide
 
