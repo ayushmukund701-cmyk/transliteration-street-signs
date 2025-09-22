@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Street Sign Transliterator</title>
+</head>
+<body>
+    <h2>Street Sign Transliterator</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <label>Upload Street Sign Image:</label>
+        <input type="file" name="image" required><br><br>
+
+        <label>Select Target Script:</label>
+        <select name="target_script">
+            <option value="Devanagari">Devanagari</option>
+            <option value="Tamil">Tamil</option>
+            <option value="Telugu">Telugu</option>
+            <option value="Malayalam">Malayalam</option>
+            <option value="Kannada">Kannada</option>
+            <option value="Gujarati">Gujarati</option>
+            <option value="Gurmukhi">Gurmukhi</option>
+            <option value="Bengali">Bengali</option>
+        </select><br><br>
+
+        <button type="submit">Transliterate</button>
+    </form>
+
+    {% if result %}
+        <h3>Results</h3>
+        <p><b>Extracted Text:</b> {{ result.original }}</p>
+        <p><b>Source Script:</b> {{ result.source_script }}</p>
+        <p><b>Target Script:</b> {{ result.target_script }}</p>
+        <p><b>Transliterated Text:</b> {{ result.output }}</p>
+    {% endif %}
+</body>
+</html>
